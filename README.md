@@ -16,7 +16,12 @@ Alle Skripte sind so konzipiert, dass sie auf dem VB365-Server ausgeführt werde
 *     Für beide Skripte (Connect-VB365RestorePortal.ps1/New-VB365EnterpriseApplication.ps1) sind die folgenden PowerShell-Module erforderlich:
   * [Azure AD](https://www.powershellgallery.com/packages/AzureAD)
   * [Az.Accounts](https://www.powershellgallery.com/packages/Az.Accounts)
-
+  
+  Sollte der folgende Fehler auftreten: "Unable to resolve package source ‘https://www.powershellgallery.com/api/v2’
+  Führen Sie den folgenden Befehl aus, um TLS 1.2 zu aktivieren:
+```
+[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+```
 ## Verwendung
 
 * Installieren von Azure AD und Az.Accounts
